@@ -549,3 +549,66 @@ body {
     padding-top: 20px !important;
   }
 }
+/* --- ESTILOS MENÚ HAMBURGUESA --- */
+
+/* Ocultar la casilla de verificación */
+#check-menu {
+  display: none;
+}
+
+/* Ocultar el botón de 3 líneas en pantallas grandes (computadora) */
+.barras-btn {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.barras-btn span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* --- REGLAS SOLO PARA CELULARES --- */
+@media (max-width: 768px) {
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  /* Mostrar el botón de 3 líneas en el celular */
+  .barras-btn {
+    display: flex;
+  }
+
+  /* Ocultar el menú por defecto en el celular */
+  .menu-enlaces {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #111; /* Color de fondo del desplegable */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .menu-enlaces ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    gap: 15px;
+  }
+
+  /* Mostrar el menú desplegado al tocar las 3 líneas */
+  #check-menu:checked ~ .menu-enlaces {
+    max-height: 300px; /* Ancho suficiente para ver las opciones */
+  }
+}

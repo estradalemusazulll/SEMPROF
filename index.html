@@ -13,19 +13,33 @@
 <body>
 
     <!-- Encabezado y Navegación -->
-    <header class="header">
-        <div class="logo-container">
-            <i class="fa-solid fa-helmet-safety logo-icon"></i>
-            <span class="logo-text">SEMPROF</span>
-        </div>
-        <nav class="nav">
-            <a href="#inicio">Inicio</a>
-            <a href="#nosotros">Sobre Nosotros</a>
-            <a href="#productos">Nuestros Productos</a>
-            <a href="#proyectos">Proyectos Grandes</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </header>
+   <header>
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="tu-logo.png" alt="SEMPROF"> <!-- o texto SEMPROF -->
+    </div>
+
+    <!-- Botón de las 3 líneas (Check secreto) -->
+    <input type="checkbox" id="check-menu">
+    <label for="check-menu" class="barras-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <!-- Lista de enlaces -->
+    <nav class="menu-enlaces">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Sobre Nosotros</a></li>
+        <li><a href="#productos">Nuestros Productos</a></li>
+        <li><a href="#proyectos">Proyectos Grandes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
     <!-- Sección Principal / Hero -->
     <section id="inicio" class="hero">
