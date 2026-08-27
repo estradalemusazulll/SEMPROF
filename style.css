@@ -512,3 +512,40 @@ body {
 .btn-whatsapp {
     margin-bottom: 15px; /* Crea espacio hacia abajo */
 }
+/* --- Arreglo para Celulares --- */
+
+/* 1. Hace que las páginas se ajusten bien al ancho de pantalla */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* 2. Ajuste del Menú y Título en pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Hace que el menú no choque y se ordene en filas/columnas */
+  nav, header {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+
+  nav ul {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    padding: 10px 0 !important;
+    gap: 8px 12px !important;
+  }
+
+  /* Reduce el tamaño del texto gigante para que quepa en el cel */
+  h1 {
+    font-size: 1.6rem !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Evita que los botones se salgan */
+  .hero, main {
+    padding-top: 20px !important;
+  }
+}
